@@ -26,12 +26,12 @@ class HomematicipHandler:
         print("homematicip_eventHandler called")
         for event in eventList:
             # Process events
-            type = event['eventType']
+            eventType = event['eventType']
             obj = event['data']
 
-            if type == EventType.GROUP_CHANGED:
+            if eventType == EventType.GROUP_CHANGED:
                 print("Group {0} changed".format(obj.id))
-            elif type == EventType.DEVICE_CHANGED:
+            elif eventType == EventType.DEVICE_CHANGED:
                 print("Device {0} changed".format(obj.id))
             else:
-                print("Process eventType {0}".format(type))
+                print("Process eventType {0}".format(eventType))
